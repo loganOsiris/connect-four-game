@@ -1,0 +1,29 @@
+@import url('index.css');
+
+.container-main-menu {
+  height: 85%;
+}
+
+.icon-two-player {
+  margin-bottom: 5ggrem;
+}
+
+.wrapper-main-menu {
+  background-color: red;
+}
+
+.button-main-menu {
+  text-wrap: nowrap;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  height: 72px;
+  border-radius: var(--radius-btn);
+  border: solid 3px var(--black);
+  box-shadow: 0 10px 0 var(--black);
+  /* border-radius: 10px; */
+}
+
+.button-main-menu + div {
+  margin-top: 30px;
+}
