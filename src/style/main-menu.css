@@ -5,11 +5,7 @@
 }
 
 .icon-two-player {
-  margin-bottom: 5ggrem;
-}
-
-.wrapper-main-menu {
-  background-color: red;
+  margin-bottom: 5rem;
 }
 
 .button-main-menu {
@@ -21,9 +17,22 @@
   border-radius: var(--radius-btn);
   border: solid 3px var(--black);
   box-shadow: 0 10px 0 var(--black);
-  /* border-radius: 10px; */
+  transition: box-shadow 100ms ease-in-out, border 100ms ease-in-out;
+}
+
+.button-main-menu:active {
+  box-shadow: 0 10px 0 var(--dark-purple);
+  border: solid 3px var(--dark-purple);
 }
 
 .button-main-menu + div {
   margin-top: 30px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button-main-menu:hover {
+    box-shadow: 0 10px 0 var(--dark-purple);
+    border: solid 3px var(--dark-purple);
+    cursor: pointer;
+  }
 }
