@@ -19,3 +19,7 @@
 .bg-app {
   background-color: var(--purple);
 }
+
+.text-purple {
+  color: var(--purple);
+}

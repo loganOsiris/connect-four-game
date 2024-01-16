@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style-type: none;
 }
 
 @font-face {
@@ -28,6 +29,7 @@
   --white: #ffffff;
   --yellow: #ffce67;
   --radius-btn: 20px;
+  --radius-modal-rules: 20px;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -72,6 +74,10 @@ body {
 
 .full-height {
   height: 100%;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .container {

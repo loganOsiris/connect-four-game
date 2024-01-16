@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/src/style/colors.css" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <script defer type="module" src="/src/main.ts"></script> -->
+    <script defer type="module" src="/src/ts/controller.ts"></script>
     <title>Vite + TS</title>
   </head>
   <body>
@@ -205,6 +205,40 @@
           </div>
         </div>
       </div>
+      <dialog class="dialog-rules">
+        <h1 class="text-center">RULES</h1>
+        <h3 class="title-dialog text-purple">OBJECTIVE</h3>
+        <p>
+          Be the first player to connect 4 of the same colored discs in a row
+          (either vertically, horizontally, or diagonally).
+        </p>
+        <h3 class="title-dialog text-purple text">HOW TO PLAY</h3>
+        <ol>
+          <li class="list-rule">
+            <h4 class="bold">1</h4>
+            <span>Red goes first in the first game.</span>
+          </li>
+          <li class="list-rule">
+            <h4>2</h4>
+            <span
+              >Players must alternate turns, and only one disc can be dropped in
+              each turn.
+            </span>
+          </li>
+          <li class="list-rule">
+            <h4>3</h4>
+            <span
+              >The game ends when there is a 4-in-a-row or a stalemate.
+            </span>
+          </li>
+          <li class="list-rule">
+            <h4>4</h4>
+            <span
+              >The starter of the previous game goes second on the next game.
+            </span>
+          </li>
+        </ol>
+      </dialog>
     </div>
   </body>
 </html>
