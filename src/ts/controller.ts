@@ -1,41 +1,19 @@
-function openDialog(dialog: HTMLDialogElement) {
-  if (dialog) {
-    dialog.show();
-  } else {
-    console.error('Dialog not found');
-  }
-}
+import dialogRulesView from './views/dialogRulesView';
 
-function closeDialog(dialog: HTMLDialogElement) {
-  if (dialog) {
-    dialog.close();
-  } else {
-    console.error('Dialog not found');
-  }
-}
+function setupDialogHandlers() {
+  dialogRulesView.addHandlerOpenDialog(() => {
+    dialogRulesView.showDialog();
+  });
 
-function handleDialog(dialog: HTMLDialogElement, open = false) {
-  if (!dialog) {
-    console.warn('Dialog is: ', dialog);
-    return;
-  }
-
-  if (open) {
-    openDialog(dialog);
-  } else {
-    closeDialog(dialog);
-  }
+  dialogRulesView.addHandlerCloseDialog(() => {
+    dialogRulesView.closeDialog();
+  });
 }
 
 function init() {
-  const dialog = document.querySelector('.dialog-rules') as HTMLDialogElement;
-
-  document
-    .querySelector('.btn-game-rules')!
-    .addEventListener('click', () => handleDialog(dialog, true));
-  dialog
-    .querySelector('.btn-ok-dialog')!
-    .addEventListener('click', () => handleDialog(dialog));
+  setupDialogHandlers();
 }
 
 document.addEventListener('DOMContentLoaded', init);
+
+export default init;

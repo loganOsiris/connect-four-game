@@ -1,0 +1,58 @@
+.btn-game {
+  background-color: var(--dark-purple);
+  color: var(--white);
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  border-radius: var(--border-radius-btn);
+}
+
+.container-btn-game {
+  padding-top: 3.1rem;
+}
+
+.btn-game--menu {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.btn-game--restart {
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+}
+
+.item-total-score {
+  text-align: center;
+  background-color: var(--white);
+  border-radius: var(--border-radius-btn);
+  box-shadow: var(--box-shadow);
+  border: var(--border);
+  width: 47%;
+
+  padding: 0.625rem 2.1rem;
+}
+
+.icon-total-score--1 {
+  position: absolute;
+  left: -30px;
+  bottom: 50%;
+  transform: translateY(50%);
+}
+
+.icon-total-score--2 {
+  position: absolute;
+
+  right: -30px;
+  bottom: 50%;
+  transform: translateY(50%);
+}
+
+.score-total-player {
+  font-size: 32px;
+  font-family: 'space-grotesk-bold';
+}
+
+.container-items-total-score {
+  padding-top: 3.1rem;
+  width: 82.5%;
+  margin: 0 auto;
+}

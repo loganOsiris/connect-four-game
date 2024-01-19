@@ -18,14 +18,12 @@
 
 .dialog-rules {
   position: fixed;
-  max-width: 90%;
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
   padding: 2rem 1.5rem;
   overflow: visible;
-  width: 100%;
-  border-radius: var(--radius-modal-rules);
+  border-radius: var(--border-radius-btn);
   border: solid 3px var(--black);
   box-shadow: 0 10px var(--black);
 }
@@ -43,6 +41,7 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
+  cursor: pointer;
 }
 
 .btn-ok-dialog:focus-visible {
