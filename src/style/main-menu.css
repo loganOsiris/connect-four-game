@@ -36,37 +36,3 @@
     cursor: pointer;
   }
 }
-
-.list-rule {
-  display: flex;
-  gap: 1rem;
-}
-
-.list-rule + .list-rule {
-  margin-top: 10px;
-}
-
-.title-dialog {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-
-.list-rule:last-child {
-  margin-bottom: 4rem;
-}
-
-.dialog-rules {
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  padding: 2rem 1.5rem;
-
-  width: 100%;
-  border-radius: var(--radius-modal-rules);
-  border: solid 3px var(--black);
-  box-shadow: 0 10px var(--black);
-}
-
-.dialog-rules:focus-visible {
-  outline: none;
-}

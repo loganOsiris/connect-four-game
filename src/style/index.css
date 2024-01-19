@@ -7,6 +7,11 @@
   list-style-type: none;
 }
 
+button {
+  background: none;
+  border: none;
+}
+
 @font-face {
   font-family: 'space-grotesk-bold';
   src: url('../assets/fonts/static/SpaceGrotesk-Bold.ttf') format('woff2');
