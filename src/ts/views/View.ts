@@ -1,9 +1,17 @@
 export default abstract class View {
-  protected _parentElement: Element = document.getElementById('app')!
+  protected _parentElement: Element = document.getElementById('app')!;
   abstract _generateMarkup(): string;
 
-
   render() {
+    if (!this?._generateMarkup) {
+      console.error(
+        'There is a problem with "generateMarkup". \n this?._generateMarkup =',
+        this?._generateMarkup,
+        console.error(this)
+      );
+      return;
+    }
+
     const markup = this._generateMarkup();
 
     this._clear();

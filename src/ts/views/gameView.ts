@@ -1,13 +1,16 @@
-import View from "./View";
+import View from './View';
 
 class GameView extends View {
   constructor() {
-    super()
+    super();
   }
 
   addHandlerClickMenu(handler: () => void) {
-    this._parentElement.querySelector('.btn-game--menu')?.addEventListener('click', handler)
-    console.log(this._parentElement.querySelector('.btn-game--menu'))
+    const btn = this._parentElement.querySelector('.btn-game--menu');
+
+    btn?.addEventListener('click', () => {
+      handler();
+    });
   }
 
   _generateMarkup() {
@@ -300,8 +303,8 @@ class GameView extends View {
       </div>
 
       <div class="footer-rectangle"></div>
-    `
+    `;
   }
 }
 
-export default new GameView()
+export default new GameView();
