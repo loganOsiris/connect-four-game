@@ -5,32 +5,3 @@
 .icon-two-player {
   margin-bottom: 5rem;
 }
-
-/* .button-main-menu {
-  text-wrap: nowrap;
-  display: flex;
-  align-items: center;
-  padding: 1rem 0.5rem;
-  height: 72px;
-  border-radius: var(--radius-btn);
-  border: solid 3px var(--black);
-  box-shadow: 0 10px 0 var(--black);
-  transition: box-shadow 100ms ease-in-out, border 100ms ease-in-out;
-}
-
-.button-main-menu:active {
-  box-shadow: 0 10px 0 var(--dark-purple);
-  border: solid 3px var(--dark-purple);
-}
-
-.button-main-menu + div {
-  margin-top: 30px;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .button-main-menu:hover {
-    box-shadow: 0 10px 0 var(--dark-purple);
-    border: solid 3px var(--dark-purple);
-    cursor: pointer;
-  }
-} */

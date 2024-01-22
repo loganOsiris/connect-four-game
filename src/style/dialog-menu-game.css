@@ -4,10 +4,30 @@
   left: 50%;
   top: 50%;
   transform: translateY(-50%) translateX(-50%);
+  border-radius: 40px;
+
+  padding: 1.875rem 1.25rem;
+  background-color: var(--purple);
+  border: var(--border);
+  box-shadow: var(--box-shadow);
 }
 
 .game-menu-dialog .custom-button {
   justify-content: center;
+}
+
+.game-menu-dialog .custom-button:not(.button-quit) {
+  background-color: var(--white);
+}
+
+.game-menu-dialog h1 {
+  color: var(--white);
+  margin-bottom: 1.875rem;
+}
+
+.button-quit {
+  background-color: var(--red);
+  color: var(--white);
 }
 
 .game-menu-dialog::backdrop {
