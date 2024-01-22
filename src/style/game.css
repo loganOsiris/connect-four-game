@@ -52,7 +52,40 @@
 }
 
 .container-items-total-score {
-  padding-top: 3.1rem;
+  padding-top: 2.5rem;
   width: 82.5%;
   margin: 0 auto;
+}
+
+.board-layer {
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.board-layer--white {
+  z-index: 2;
+}
+
+.container-board {
+  padding-top: 3rem;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.footer-rectangle {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  z-index: 0;
+  width: 105%;
+  height: 85px;
+  border-top-right-radius: 60px;
+  border-top-left-radius: 60px;
+  background-color: var(--dark-purple);
+}
+
+.game-menu-dialog {
 }

@@ -12,6 +12,12 @@ button {
   border: none;
 }
 
+dialog,
+dialog:focus-visible {
+  outline: none;
+  border: none;
+}
+
 @font-face {
   font-family: 'space-grotesk-bold';
   src: url('../assets/fonts/static/SpaceGrotesk-Bold.ttf') format('woff2');
@@ -99,6 +105,35 @@ body {
 
 .relative {
   position: relative;
+}
+
+.custom-button {
+  text-wrap: nowrap;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  height: 72px;
+  border-radius: var(--radius-btn);
+  border: solid 3px var(--black);
+  box-shadow: 0 10px 0 var(--black);
+  transition: box-shadow 100ms ease-in-out, border 100ms ease-in-out;
+}
+
+.custom-button:active {
+  box-shadow: 0 10px 0 var(--dark-purple);
+  border: solid 3px var(--dark-purple);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .custom-button:hover {
+    box-shadow: 0 10px 0 var(--dark-purple);
+    border: solid 3px var(--dark-purple);
+    cursor: pointer;
+  }
+}
+
+.custom-button + div {
+  margin-top: 30px;
 }
 
 h1 {

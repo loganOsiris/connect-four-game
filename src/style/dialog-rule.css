@@ -17,19 +17,15 @@
 }
 
 .dialog-rules {
-  position: fixed;
+  width: 90%;
   left: 50%;
   top: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateY(-50%) translateX(-50%);
   padding: 2rem 1.5rem;
   overflow: visible;
-  border-radius: var(--border-radius-btn);
+  border-radius: 40px;
   border: solid 3px var(--black);
   box-shadow: 0 10px var(--black);
-}
-
-.dialog-rules:focus-visible {
-  outline: none;
 }
 
 .wrapper-dialog {

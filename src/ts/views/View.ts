@@ -1,15 +1,18 @@
 export default abstract class View {
+  protected _parentElement: Element = document.getElementById('app')!
   abstract _generateMarkup(): string;
 
-  //   render(render = true) {
-  //     // this._data = data;
-  //     const markup = this._generateMarkup();
 
-  //     if (!render) return markup;
+  render() {
+    const markup = this._generateMarkup();
 
-  //     this._clear();
-  //     this._parentElement.insertAdjacentHTML('afterbegin', markup);
-  //   }
+    this._clear();
+    this._parentElement.insertAdjacentHTML('afterbegin', markup);
+  }
+
+  _clear() {
+    this._parentElement.innerHTML = '';
+  }
 
   // update(data) {
   //   this._data = data;

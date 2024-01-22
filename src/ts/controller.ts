@@ -1,4 +1,8 @@
 import dialogRulesView from './views/dialogRulesView';
+import mainMenuView from './views/mainMenuView';
+import gameView from './views/gameView';
+
+(document.querySelector('.game-menu-dialog') as HTMLDialogElement).showModal()
 
 function setupDialogHandlers() {
   dialogRulesView.addHandlerOpenDialog(() => {
@@ -10,10 +14,19 @@ function setupDialogHandlers() {
   });
 }
 
-function init() {
-  setupDialogHandlers();
+function playPvpClick() {
+  gameView.render()
+  gameView.addHandlerClickMenu(() => { })
 }
 
-document.addEventListener('DOMContentLoaded', init);
+function init() {
+  mainMenuView.render()
+  dialogRulesView.initDomElements()
+  setupDialogHandlers();
+  mainMenuView.addHandlerPlayPvpClick(playPvpClick)
 
-export default init;
+  console.log('app initialized')
+}
+
+// document.addEventListener('DOMContentLoaded', init);
+

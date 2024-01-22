@@ -6,7 +6,7 @@
   margin-bottom: 5rem;
 }
 
-.button-main-menu {
+/* .button-main-menu {
   text-wrap: nowrap;
   display: flex;
   align-items: center;
@@ -33,4 +33,4 @@
     border: solid 3px var(--dark-purple);
     cursor: pointer;
   }
-}
+} */
