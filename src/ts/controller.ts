@@ -14,9 +14,17 @@ function setupDialogHandlers() {
   });
 }
 
+function handleGameMenuRender() {
+  menuView.showDialog();
+}
+
 function playPvpClick() {
   gameView.render();
-  gameView.addHandlerClickMenu(menuView.render);
+
+  menuView.render(false);
+  menuView.initDomElements();
+
+  gameView.addHandlerClickMenu(handleGameMenuRender);
 }
 
 function init() {

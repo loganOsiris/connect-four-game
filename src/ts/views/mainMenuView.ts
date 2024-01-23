@@ -1,9 +1,10 @@
-import View from "./View";
+import View from './View';
 
 class MainMenuView extends View {
-
   addHandlerPlayPvpClick(handler: () => void) {
-    this._parentElement.querySelector('.button-pvp')?.addEventListener('click', handler);
+    this._parentElement
+      .querySelector('.button-pvp')
+      ?.addEventListener('click', handler);
   }
 
   _generateMarkup(): string {
@@ -285,8 +286,8 @@ class MainMenuView extends View {
             </svg>
           </button>
         </div>
-      </dialog>`
+      </dialog>`;
   }
 }
 
-export default new MainMenuView()
+export default new MainMenuView();

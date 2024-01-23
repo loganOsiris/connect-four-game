@@ -2,7 +2,7 @@ export default abstract class View {
   protected _parentElement: Element = document.getElementById('app')!;
   abstract _generateMarkup(): string;
 
-  render() {
+  render(clear = true) {
     if (!this?._generateMarkup) {
       console.error(
         'There is a problem with "generateMarkup". \n this?._generateMarkup =',
@@ -13,8 +13,9 @@ export default abstract class View {
     }
 
     const markup = this._generateMarkup();
-
-    this._clear();
+    if (clear) {
+      this._clear();
+    }
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
