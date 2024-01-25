@@ -1,50 +1,43 @@
 import dialogRulesView from './views/dialogRulesView';
 import mainMenuView from './views/mainMenuView';
 import gameView from './views/gameView';
-import menuView from './views/menuView';
-// (document.querySelector('.game-menu-dialog') as HTMLDialogElement).showModal()
+import modalMenuView from './views/modalMenuView';
 
 function setupDialogHandlers() {
-  dialogRulesView.addHandlerOpenDialog(() => {
-    dialogRulesView.showDialog();
-  });
-
-  dialogRulesView.addHandlerCloseDialog(() => {
-    dialogRulesView.closeDialog();
-  });
+  dialogRulesView.addHandlerOpenDialog(() => dialogRulesView.showDialog());
+  dialogRulesView.addHandlerCloseDialog(() => dialogRulesView.closeDialog());
 }
 
 function handleGameMenuRender() {
-  menuView.showDialog();
+  modalMenuView.showDialog();
+}
+
+function initMainMenu() {
+  mainMenuView.render();
+  mainMenuView.addHandlerPlayPvpClick(playPvpClick);
+  dialogRulesView.initDomElements();
+  setupDialogHandlers();
+}
+
+function handlerQuitGame() {
+  initMainMenu();
+  //TODO: Add some logic to finish a game
+  //TODO: ask confirmation before leaving
 }
 
 function playPvpClick() {
   gameView.render();
 
-  menuView.render(false);
-  menuView.initDomElements();
+  modalMenuView.render(false);
+  modalMenuView.initDomElements(handlerQuitGame);
 
   gameView.addHandlerClickMenu(handleGameMenuRender);
 }
 
 function init() {
-  mainMenuView.render();
-  dialogRulesView.initDomElements();
-  setupDialogHandlers();
-  mainMenuView.addHandlerPlayPvpClick(playPvpClick);
+  initMainMenu();
 
   console.log('app initialized');
 }
 
 document.addEventListener('DOMContentLoaded', init);
-
-/* 
-
-Le problème est que `mainMenuView.addHandlerPlayPvpClick(playPvpClick)` 
-fait le rendu du jeu et également du dialog en y ajoutant 
-un event listener via Callback et tout ça au rendu de l’app.
-Mais ça ne marche pas car le menu n’existe pas.
-
-# SOLUTION:
-`gameView.addHandlerClickMenu(menuView.render)` ne doit plus être appelé à l’initialisation.
-*/
