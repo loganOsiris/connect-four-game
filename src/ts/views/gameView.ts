@@ -1,17 +1,28 @@
 import View from './View';
 
 class GameView extends View {
+  private _board: HTMLElement | null;
+
   constructor() {
     super();
+    this._board = this._parentElement.querySelector('.container-board');
+    console.log(this._board);
+  }
+
+  initDomElements() {
+    // this._board = this._parentElement.querySelector('.')
   }
 
   addHandlerClickMenu(handler: () => void) {
-    const btn = this._parentElement.querySelector('.btn-game--menu');
-
-    btn?.addEventListener('click', () => {
-      handler();
-    });
+    const button = this._parentElement.querySelector('.btn-game--menu');
+    if (button) {
+      button.addEventListener('click', () => {
+        handler();
+      });
+    }
   }
+
+  addHandlerClickBoard() {}
 
   _generateMarkup() {
     return `

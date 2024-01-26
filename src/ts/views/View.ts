@@ -19,7 +19,7 @@ export default abstract class View {
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
-  _clear() {
+  private _clear() {
     this._parentElement.innerHTML = '';
   }
 

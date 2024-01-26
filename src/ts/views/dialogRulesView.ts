@@ -1,9 +1,9 @@
-import View from "./View";
+import View from './View';
 
 class DialogRulesView extends View {
-  _dialog: HTMLDialogElement | null;
-  _btnOpen: Element | null;
-  _btnClose: Element | null;
+  private _dialog: HTMLDialogElement | null;
+  private _btnOpen: Element | null;
+  private _btnClose: Element | null;
 
   constructor() {
     super();
@@ -34,8 +34,9 @@ class DialogRulesView extends View {
     this._dialog?.close();
   }
 
-
-  _generateMarkup() { return '' }
+  _generateMarkup() {
+    return '';
+  }
 }
 
 export default new DialogRulesView();
