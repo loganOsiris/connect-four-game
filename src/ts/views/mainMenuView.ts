@@ -8,7 +8,8 @@ class MainMenuView extends View {
   }
 
   _generateMarkup(): string {
-    return `<div class="container-main-menu grid place-center">
+    return `
+    <div class="container-main-menu grid place-center">
         <div class="container grid place-center">
           <svg
             class="icon-two-player"
@@ -19,7 +20,6 @@ class MainMenuView extends View {
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
           >
-            <title>logo</title>
             <g
               id="Designs"
               stroke="none"
@@ -90,7 +90,6 @@ class MainMenuView extends View {
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
               >
-                <title>player-vs-player</title>
                 <g
                   id="Designs"
                   stroke="none"
@@ -245,7 +244,6 @@ class MainMenuView extends View {
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
             >
-              <title>icon-check</title>
               <g
                 id="Designs"
                 stroke="none"
@@ -286,7 +284,8 @@ class MainMenuView extends View {
             </svg>
           </button>
         </div>
-      </dialog>`;
+      </dialog>
+    `;
   }
 }
 

@@ -2,6 +2,7 @@ import dialogRulesView from '../views/dialogRulesView';
 import mainMenuView from '../views/mainMenuView';
 import gameView from '../views/gameView';
 import modalMenuView from '../views/modalMenuView';
+import gameController from './gameController';
 
 class ViewController {
   constructor() {
@@ -22,9 +23,11 @@ class ViewController {
 
   private _playPvpClick() {
     gameView.render();
-    modalMenuView.render(false);
+    gameView.initDomElements();
     modalMenuView.initDomElements(this._handlerQuitGame.bind(this));
     gameView.addHandlerClickMenu(this._handleGameMenuRender.bind(this));
+
+    gameController.init();
     // TODO: Initialize gameplay logic here
   }
 

@@ -1,6 +1,7 @@
 import View from './View';
 
 class ModalMenuView extends View {
+  // TODO: Essayer de tout déplacer dans gameView
   private _dialog: HTMLDialogElement | null;
   constructor() {
     super();
@@ -18,9 +19,10 @@ class ModalMenuView extends View {
   }
 
   addHandlerClickModal(handlerQuit: () => void) {
-    this._dialog?.addEventListener('click', (e) =>
-      this._handleClickDialog(e, handlerQuit)
-    );
+    this._dialog?.addEventListener('click', (e) => {
+      console.log('click');
+      this._handleClickDialog(e, handlerQuit);
+    });
   }
 
   private _handleClickDialog(e: MouseEvent, handlerQuit: () => void) {
@@ -81,3 +83,7 @@ class ModalMenuView extends View {
 }
 
 export default new ModalMenuView();
+/**
+ * Le problème que j'ai actuellement, quand je drop un disc et bien le menu n'est plus cliquable.
+ * Je pense qu'il serait plus simple de tout déplacer dans gameView et supprimer cette class*
+ */
